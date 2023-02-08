@@ -88,17 +88,16 @@ Run `step9_getBoW.m` to get the bag of word (BoW) model using spectrograms with 
 
 **Step11:**
 Run labeling GUI step11_IIICGUI_mPatients.m   
-<img width="135" alt="image" src="https://user-images.githubusercontent.com/10371730/217502524-d3c6aea2-ae40-4348-b115-eef124a5c4c2.png">
 
 input rater initials to store scores  
-<img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217502639-33f1a7aa-c8c4-4192-8b1c-222060313aa7.png">
+<img width="135" alt="image" src="https://user-images.githubusercontent.com/10371730/217502524-d3c6aea2-ae40-4348-b115-eef124a5c4c2.png">
 
 click Start to continue   
+<img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217502639-33f1a7aa-c8c4-4192-8b1c-222060313aa7.png">
 
- 
-Label 30 to 50 samples selected by GUI per interaction (samples at the class boundaries).
+Label 30 to 50 samples selected by GUI per interaction (samples at the class boundaries).  
 <img width="467" alt="image" src="https://user-images.githubusercontent.com/10371730/217505443-c2b3304f-2e3c-45f7-bc6e-81002e2f38e7.png">
 
-Press Yes to update labels (spreading in PaCMAP by nearest labeled points) and enter next iteration.
-Press Done button to seal and export the labels.
-![image](https://user-images.githubusercontent.com/10371730/217505506-7291ccae-f47b-4218-a315-2030bc8dfc26.png)
+Press Yes to update labels (spreading in PaCMAP by nearest labeled points) and enter next iteration.  
+Press Done button to seal and export the labels.  
+<img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217521077-be6e0511-3bd3-4f18-8123-662e8aa5f0df.png">
