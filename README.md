@@ -28,11 +28,11 @@ Fp1 F3 C3 P3 F7 T3 T5 O1 Fz Cz Pz Fp2 F4 C4 P4 F8 T4 T6 O2 (EKG)
 
 Install anaconda3 and open a terminal
 
-`$ conda create -n iiic python=3.6`
-`$ activate iiic`
-`$ conda install -c conda-forge hdf5storage`
-`$ pip install mne`
-`$ pip install torch==1.5.0+cpu torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`
+`$ conda create -n iiic python=3.6`  
+`$ activate iiic`  
+`$ conda install -c conda-forge hdf5storage`  
+`$ pip install mne`  
+`$ pip install torch==1.5.0+cpu torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`  
 
 Run MATLAB wrapper step3_runSPaRCNat.m
 
