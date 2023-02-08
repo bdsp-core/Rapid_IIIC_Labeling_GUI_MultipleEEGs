@@ -120,7 +120,6 @@ Step1: Read EDF to MAT using EEGLAB toolbox for MATLAB. Run script step1_readEDF
  
 Step2: Preprocess MAT to select/rearrange channels, resample to 200Hz , and denoise with [0.5 40Hz] band-pass and 5Hz band-stop centered at the power-line frequency (US: 60Hz UK: 50Hz). Output files are saved in .\Data\processed\.
         
-
 Step3: run SPaRCNet (Python backend)
 Configure Python 
 -	Install anaconda3 and open a terminal
@@ -136,11 +135,13 @@ Run MATLAB wrapper step3_runSPaRCNat.m
 Eg. row #1: scores for [0  10sec], row #2: scores for [2  12sec], ... 
  
 Step4: Run step4_readCSV.m to read CSV to MAT to make sure every 2sec segment got scores. The output files are saved in .\Data\iiic\model_prediction\.
+
 Step5: Run step5_computeSpectrograms to get regional average spectrograms in .\Data\Spectrograms\, which contains the following variables:
 -	Sdata: 4 regional average spectrograms
 -	stimes: time coordinates
 -	sfreqs: frequency coordinates
 -	params: spectrogram parameters
+
 Step6: Run step6_segementEEG.m to divide EEG into stationary periods with change point (CP) detection, and the output look-up-table are exported to .\Data\CPDs\ which contains the following variables:
 -	isCPcenters: 0 (not CP center) or 1 (is CP center)
 -	isCPs: 0 (not CP) pr 1 (is CP)
