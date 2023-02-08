@@ -76,7 +76,6 @@ Run step8_getLUT.m to get the global look-up-table (LUT) for labelling GUI:
 -	Column #3: CP range 
 -	Column #4: model prediction
 -	Column #5: model probabilities for Other, Seizure, LPD, GPD, LRDA, GRDA
-<img src="readme.fld/image002.png" alt="drawing" width="300"/>
 
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217500532-57e6e6eb-5f3b-4023-8e96-de9743545ab1.png">
 
