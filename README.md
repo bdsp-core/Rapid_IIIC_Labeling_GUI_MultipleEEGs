@@ -90,13 +90,18 @@ Run step9_getBoW.m to get the bag of word (BoW) model using spectrograms with 50
 
 **Step11:**
 Run labeling GUI step11_IIICGUI_mPatients.m 
-  input rater initials to store scores.
-  click Start to continue.
+<img width="135" alt="image" src="https://user-images.githubusercontent.com/10371730/217502524-d3c6aea2-ae40-4348-b115-eef124a5c4c2.png">
+
+input rater initials to store scores.
+<img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217502639-33f1a7aa-c8c4-4192-8b1c-222060313aa7.png">
+
+click Start to continue.
+
  
 Label 30 to 50 samples selected by GUI per interaction (samples at the class boundaries).
- 
+<img width="467" alt="image" src="https://user-images.githubusercontent.com/10371730/217505443-c2b3304f-2e3c-45f7-bc6e-81002e2f38e7.png">
+
 Press Yes to update labels (spreading in PaCMAP by nearest labeled points) and enter next iteration.
 Press Done button to seal and export the labels.
-![image](https://user-images.githubusercontent.com/10371730/217501107-f9144882-dd66-45cf-95ff-63ee9d1106e7.png)
-
+![image](https://user-images.githubusercontent.com/10371730/217505506-7291ccae-f47b-4218-a315-2030bc8dfc26.png)
 
