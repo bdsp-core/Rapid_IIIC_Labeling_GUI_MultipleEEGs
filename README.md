@@ -70,7 +70,7 @@ Run step7_parseCPcenters.m to parse data of CP centers for labelling GUI in .\Da
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217500593-34a296c3-b575-4cab-ac9f-ab81d63f8193.png">
 
 **Step8:**
-Run step8_getLUT.m to get the global look-up-table (LUT) for labelling GUI:
+Run `step8_getLUT.m` to get the global look-up-table (LUT) for labelling GUI:
 -	Column #1: EEG name
 -	Column #2: sample index in 2sec segment (CP center)
 -	Column #3: CP range 
@@ -80,20 +80,20 @@ Run step8_getLUT.m to get the global look-up-table (LUT) for labelling GUI:
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217500532-57e6e6eb-5f3b-4023-8e96-de9743545ab1.png">
 
 **Step9:**
-Run step9_getBoW.m to get the bag of word (BoW) model using spectrograms with 500 words using K-means clustering method and compute the normalized distribution of words for each sample as BoW feature. This is further used in labelling GUI to do similarity search in chi -square distance.
+Run `step9_getBoW.m` to get the bag of word (BoW) model using spectrograms with 500 words using K-means clustering method and compute the normalized distribution of words for each sample as BoW feature. This is further used in labelling GUI to do similarity search in chi -square distance.
 
 **Step10:**
 -	Configure PaCMAP (Python library:  https://github.com/YingfanWang/PaCMAP). 
 -	Run step10_getPaCMap.m to get the global embedding.
 
 **Step11:**
-Run labeling GUI step11_IIICGUI_mPatients.m 
+Run labeling GUI step11_IIICGUI_mPatients.m   
 <img width="135" alt="image" src="https://user-images.githubusercontent.com/10371730/217502524-d3c6aea2-ae40-4348-b115-eef124a5c4c2.png">
 
-input rater initials to store scores.
+input rater initials to store scores  
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217502639-33f1a7aa-c8c4-4192-8b1c-222060313aa7.png">
 
-click Start to continue.
+click Start to continue   
 
  
 Label 30 to 50 samples selected by GUI per interaction (samples at the class boundaries).
