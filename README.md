@@ -7,7 +7,8 @@ This repository describes a GUI developed by Dr. Jin Jing ("JJ"), PhD that enabl
 
 **Input data:** Raw EDF files inside .\Data\EDF\; scalp monopolar/C2 EEG that contains a full set of 19 channels + 1 EKG (optional), with channels named as follows:
 
-Fp1 F3 C3 P3 F7 T3 T5 O1 Fz Cz Pz Fp2 F4 C4 P4 F8 T4 T6 O2 (EKG)
+Fp1 F3 C3 P3 F7 T3 T5 O1 Fz Cz Pz Fp2 F4 C4 P4 F8 T4 T6 O2 (EKG)  
+
 <img width="193" alt="image" src="https://user-images.githubusercontent.com/10371730/217501280-143a4953-4c6b-4f2e-b4b5-18ecb03e2db1.png">
 
 **Step1:** Read EDF to MAT using EEGLAB toolbox for MATLAB. Run script step1_readEDF2MAT.m, which converts EDF format to MAT format in .\Data\MAT\ that contains the following variables:
