@@ -64,37 +64,52 @@ Eg. row #1: scores for 0 10sec, row #2: scores for 2 12sec, ...
 - _sfreqs_: frequency coordinates
 - _params_: spectrogram parameters
 
-**Step6:** Run step6_segementEEG.m to divide EEG into stationary periods with change point (CP) detection, and the output look-up-table are exported to .\Data\CPDs\ which contains the following variables:
+**Step6:** Run step6_segementEEG.m to divide EEG into stationary periods via change point (CP) detection. The output look-up-table is exported to .\Data\CPDs\ which contains the following variables:
 
 -	isCPcenters: 0 (not CP center) or 1 (is CP center)
 -	isCPs: 0 (not CP) pr 1 (is CP)
--	lut_cpd: index of each CP center (column #1) and its range [start (column #2),  end (column #3)]
+-	lut_cpd: index of each CP center (column #1) and its range [start (column #2),  end (column #3)]; lut = lookup table
 <img src="readme.fld/image002.png" alt="drawing" width="300"/>
 
-**Step7:** Compute embedding map (PaCMAP) and wrap all inputs into one task folder for each patient
+**Step7:** 
+Run step7_parseCPcenters.m to parse data of CP centers for labelling GUI in .\Data\CP_centers\ each contains the following variables:
+-	SEG: 14sec EEG 
+-	Sdata: 10min spectrograms
+-	fileKey: EEG file token
+-	idx_CPcenter: the index of CP center (2sec unit) in cEEG
+-	idx_CPrange: the range of CP segment (2sec unit) in cEEG
+-	scores: model predicted probabilities, in order of Other, Seizure, LPD, GPD, LRDA, GRDA
+-	sfregs: frequency coordinates of spectrograms
+<img src="readme.fld/image002.png" alt="drawing" width="300"/>
+<img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217500593-34a296c3-b575-4cab-ac9f-ab81d63f8193.png">
 
-Configure PaCMAP (Python library: https://github.com/YingfanWang/PaCMAP)
+**Step8:**
+Run step8_getLUT.m to get the global look-up-table (LUT) for labelling GUI:
+-	Column #1: EEG name
+-	Column #2: sample index in 2sec segment (CP center)
+-	Column #3: CP range 
+-	Column #4: model prediction
+-	Column #5: model probabilities for Other, Seizure, LPD, GPD, LRDA, GRDA
+<img src="readme.fld/image002.png" alt="drawing" width="300"/>
 
-Run step6_prepare4GUI.m
+<img width="470" alt="image" src="https://user-images.githubusercontent.com/10371730/217500532-57e6e6eb-5f3b-4023-8e96-de9743545ab1.png">
 
-<img src="readme.fld/image005.png" alt="drawing" width="500"/>
+**Step9:**
+Run step9_getBoW.m to get the bag of word (BoW) model using spectrograms with 500 words using K-means clustering method and compute the normalized distribution of words for each sample as BoW feature. This is further used in labelling GUI to do similarity search in chi -square distance.
 
-**Step8:** Run GUI CMGUI_Sequential_BoWspreading_v3.m inside the task folder .\Task\subject01\
+**Step10:**
+-	Configure PaCMAP (Python library:  https://github.com/YingfanWang/PaCMAP). 
+-	Run step10_getPaCMap.m to get the global embedding.
 
-<img src="readme.fld/image006.png" alt="drawing" width="300"/>  input rater initials to store scores.
+**Step11:**
+Run labeling GUI step11_IIICGUI_mPatients.m 
+  input rater initials to store scores.
+  click Start to continue.
+ 
+Label 30 to 50 samples selected by GUI per interaction (samples at the class boundaries).
+ 
+Press Yes to update labels (spreading in PaCMAP by nearest labeled points) and enter next iteration.
+Press Done button to seal and export the labels.
+![image](https://user-images.githubusercontent.com/10371730/217501107-f9144882-dd66-45cf-95ff-63ee9d1106e7.png)
 
-<img src="readme.fld/image007.png" alt="drawing" width="500"/>  click Start to continue.
 
-Enter Phase #I: label K=50 clusters in a row.
-
-<img src="readme.fld/image008.png" alt="drawing" width="500"/>
-
-Enter Phase #2: sequential inspect all labels.
-
-<img src="readme.fld/image009.png" alt="drawing" width="500"/>
-
-Press _Done_ button to seal and export the labels.
-
-<img src="readme.fld/image010.png" alt="drawing" width="500"/>
-
-Please refer to slides for detailed instructions.
