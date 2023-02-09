@@ -3,6 +3,8 @@ GUI for rapid labeling of segments from multiple EEGs, and instructions for prep
 
 This repository describes a GUI developed by Dr. Jin Jing ("JJ"), PhD that enables rapid labeling of IIIC patterns. By following these instructions you can set up the GUI to annotate your own data. Note that this GUI allows labeling of isolated samples from multiple EEGs in one task. This is different from the GUI that allows labeling of a single EEG exhaustively. 
 
+Files and data (~8GB) can be downloaded [here](https://www.dropbox.com/scl/fo/9u457f1usu6zkjr45s6vy/h?dl=0&rlkey=8z5vhcv2x0u2yi9qzsot3xqom).
+
 **Requirements:** MATLAB, EEGLAB (https://sccn.ucsd.edu/eeglab/index.php), and Python (Anaconda)
 
 **Input data:** Raw EDF files inside .\Data\EDF\; scalp monopolar/C2 EEG that contains a full set of 19 channels + 1 EKG (optional), with channels named as follows:
